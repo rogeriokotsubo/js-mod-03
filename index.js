@@ -20,7 +20,7 @@ function Calcula() {
       break; 
   }
   
-  const resultFinal= document.querySelector("#span-result");
+  const resultFinal= document.querySelector("#h2-result");
   resultFinal.textContent=result;
   console.log(result);
 } 
