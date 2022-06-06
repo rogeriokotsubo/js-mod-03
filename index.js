@@ -1,9 +1,11 @@
 document.getElementById('btn-calc').addEventListener('click', Calcula);
 
 function Calcula() {
-  const operador = document.querySelector("#sel-operator").value;
-  operando1 = parseFloat(document.querySelector("#elemento1").value);
-  operando2 = parseFloat(document.querySelector("#elemento2").value);
+  const operador = document.querySelector('#sel-operator').value;
+  const resultFinal= document.querySelector('#h2-result');
+  operando1 = parseFloat(document.querySelector('#elemento1').value);
+  operando2 = parseFloat(document.querySelector('#elemento2').value);
+  let result = '';
 
   switch (operador){
     case "soma": 
@@ -20,25 +22,23 @@ function Calcula() {
       break; 
   }
   
-  const resultFinal= document.querySelector("#h2-result");
   resultFinal.textContent=result;
   console.log(result);
 } 
 
 function soma(){
-  let result = operando1 + operando2;
-  console.log(result);
-  return 'Resultado: ' + result.toFixed(2);
+  const res = operando1 + operando2;
+  return 'Resultado: ' + res.toFixed(2);
 }
 
 function subtracao(){
-  let result = operando1 - operando2;
-  return 'Resultado: ' + result.toFixed(2);
+  const res = operando1 - operando2;
+  return 'Resultado: ' + res.toFixed(2);
 }
 
 function multiplicacao(){
-  let result = operando1 * operando2;
-  return 'Resultado: ' + result.toFixed(2);
+  const res = operando1 * operando2;
+  return 'Resultado: ' + res.toFixed(2);
 }
 
 function divisao(){
@@ -46,8 +46,8 @@ function divisao(){
     alert('Divisão por Zero!');
     return 'Divisão por Zero!';
   }
-  let result = operando1 / operando2 ;
-  return 'Resultado: ' + result.toFixed(2) ;
+  const res = operando1 / operando2 ;
+  return 'Resultado: ' + res.toFixed(2) ;
 }
 
 
