@@ -1,6 +1,6 @@
-document.getElementById('btn-calc').addEventListener('click', Calcula);
+document.getElementById('btn-calc').addEventListener('click', Calcular);
 
-function Calcula() {
+function Calcular() {
   const operador = document.querySelector('#sel-operator').value;
   const resultFinal= document.querySelector('#h2-result');
   operando1 = parseFloat(document.querySelector('#elemento1').value);
@@ -9,16 +9,16 @@ function Calcula() {
 
   switch (operador){
     case "soma": 
-      result = soma();
+      result = somar();
       break;
     case "subtracao": 
-      result = subtracao();
+      result = subtrair();
       break;
     case "multiplicacao": 
-      result = multiplicacao();
+      result = multiplicar();
       break;
     case "divisao": 
-      result = divisao();
+      result = dividir();
       break; 
   }
   
@@ -26,22 +26,22 @@ function Calcula() {
   console.log(result);
 } 
 
-function soma(){
+function somar(){
   const res = operando1 + operando2;
   return 'Resultado: ' + res.toFixed(2);
 }
 
-function subtracao(){
+function subtrair(){
   const res = operando1 - operando2;
   return 'Resultado: ' + res.toFixed(2);
 }
 
-function multiplicacao(){
+function multiplicar(){
   const res = operando1 * operando2;
   return 'Resultado: ' + res.toFixed(2);
 }
 
-function divisao(){
+function dividir(){
   if (operando2==0){ //divisão com denominador=0
     alert('Divisão por Zero!');
     return 'Divisão por Zero!';
