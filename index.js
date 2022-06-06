@@ -5,7 +5,6 @@ function Calcula() {
   operando1 = parseFloat(document.querySelector("#elemento1").value);
   operando2 = parseFloat(document.querySelector("#elemento2").value);
 
-
   switch (operador){
     case "soma": 
       result = soma();
@@ -22,32 +21,33 @@ function Calcula() {
   }
   
   const resultFinal= document.querySelector("#span-result");
-  if (result==false){
-    resultFinal.textContent='Divisão por Zero!';
-    console.log('Divisão por Zero!');
-  } else {
-  resultFinal.textContent='Resultado: ' + Math.round(result*100)/100 ;
-  console.log('Resultado: ' + Math.round(result*100)/100);
-}
+  resultFinal.textContent=result;
+  console.log(result);
 } 
 
 function soma(){
-  return operando1 + operando2 ;
+  let result = operando1 + operando2;
+  console.log(result);
+  return 'Resultado: ' + result.toFixed(2);
 }
 
 function subtracao(){
-  return operando1 - operando2 ;
+  let result = operando1 - operando2;
+  return 'Resultado: ' + result.toFixed(2);
 }
 
 function multiplicacao(){
-  return operando1 * operando2 ;
+  let result = operando1 * operando2;
+  return 'Resultado: ' + result.toFixed(2);
 }
 
 function divisao(){
   if (operando2==0){ //divisão com denominador=0
     alert('Divisão por Zero!');
-    return false;
+    return 'Divisão por Zero!';
   }
-  return operando1 / operando2 ;
+  let result = operando1 / operando2 ;
+  return 'Resultado: ' + result.toFixed(2) ;
 }
+
 
