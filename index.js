@@ -22,32 +22,34 @@ function Calcular() {
       break; 
   }
   
-  resultFinal.textContent=result;
   console.log(result);
+  if (isNaN(result)){
+    resultFinal.textContent='Erro: Divisão por Zero!';
+    console.log('Erro: Divisão por Zero!');
+  } else {
+    resultFinal.textContent='Resultado: ' + result;
+    console.log('Resultado: ' + result);
+  }
 } 
 
 function somar(){
-  const res = operando1 + operando2;
-  return 'Resultado: ' + res.toFixed(2);
+  return (operando1 + operando2).toFixed(2);
 }
 
 function subtrair(){
-  const res = operando1 - operando2;
-  return 'Resultado: ' + res.toFixed(2);
+  return (operando1 - operando2).toFixed(2);
 }
 
 function multiplicar(){
-  const res = operando1 * operando2;
-  return 'Resultado: ' + res.toFixed(2);
+  return (operando1 * operando2).toFixed(2);
 }
 
 function dividir(){
   if (operando2==0){ //divisão com denominador=0
-    alert('Divisão por Zero!');
-    return 'Divisão por Zero!';
+    alert('Erro: Divisão por Zero!');
+    return 'Erro';
   }
-  const res = operando1 / operando2 ;
-  return 'Resultado: ' + res.toFixed(2) ;
+  return (operando1 / operando2).toFixed(2);
 }
 
 
