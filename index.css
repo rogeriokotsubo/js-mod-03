@@ -68,6 +68,7 @@ body:after{
 #ctn-select{
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 26vw;
   gap: 1vw;
 }
@@ -80,7 +81,7 @@ body:after{
   width: 18vw;
   align-self: left;
   font-size: 14px;
-  height: 2.3vh;
+  height: 3vh;
 }
 
 #btn-calc{
@@ -101,6 +102,6 @@ body:after{
   word-spacing: 0.1;
   padding-bottom: 2vh;
   width: 20vw;
-  height: 5vh;
+  height: 6vh;
   text-align: center;
 }
