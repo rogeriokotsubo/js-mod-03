@@ -9,20 +9,19 @@ function Calcular() {
 
   switch (operador){
     case "soma": 
-      result = somar();
+      result = somar(2);
       break;
     case "subtracao": 
-      result = subtrair();
+      result = subtrair(2);
       break;
     case "multiplicacao": 
-      result = multiplicar();
+      result = multiplicar(2);
       break;
     case "divisao": 
-      result = dividir();
+      result = dividir(2);
       break; 
   }
   
-  console.log(result);
   if (isNaN(result)){
     resultFinal.textContent='Erro: Divisão por Zero!';
     console.log('Erro: Divisão por Zero!');
@@ -32,24 +31,24 @@ function Calcular() {
   }
 } 
 
-function somar(){
-  return (operando1 + operando2).toFixed(2);
+function somar(decimais){
+  return (operando1 + operando2).toFixed(decimais);
 }
 
-function subtrair(){
-  return (operando1 - operando2).toFixed(2);
+function subtrair(decimais){
+  return (operando1 - operando2).toFixed(decimais);
 }
 
-function multiplicar(){
-  return (operando1 * operando2).toFixed(2);
+function multiplicar(decimais){
+  return (operando1 * operando2).toFixed(decimais);
 }
 
-function dividir(){
+function dividir(decimais){
   if (operando2==0){ //divisão com denominador=0
     alert('Erro: Divisão por Zero!');
     return 'Erro';
   }
-  return (operando1 / operando2).toFixed(2);
+  return (operando1 / operando2).toFixed(decimais);
 }
 
 
